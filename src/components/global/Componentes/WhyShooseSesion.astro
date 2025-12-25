@@ -1,0 +1,76 @@
+---
+import { CircleDollarSign, PackageCheck, Car, MessageCircleWarning } from "lucide-react";
+
+
+---
+
+<section class="py-16 px-4 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        ¿Por qué elegir <span class="text-blue-600">La Feria del Aseo</span>?
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Somos tu socio confiable en soluciones de limpieza profesional
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <!-- Card 1: Calidad Garantizada -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-red-400 flex items-center justify-center mb-4">
+          <PackageCheck className="w-8 h-8 text-white" />
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Calidad Garantizada</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Productos certificados y de alta calidad para resultados excepcionales
+        </p>
+      </div>
+
+      <!-- Card 2: Mejores Precios -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-red-400 flex items-center justify-center mb-4">
+          <CircleDollarSign className="w-8 h-8 text-white" />
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Mejores Precios</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Precios competitivos sin comprometer la calidad de nuestros productos
+        </p>
+      </div>
+
+      <!-- Card 3: Entrega Rápida -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-red-400 flex items-center justify-center mb-4">
+          <Car className="w-8 h-8 text-white" />
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Entrega Rápida</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Servicio de entrega eficiente para mantener tu negocio siempre abastecido
+        </p>
+      </div>
+
+      <!-- Card 4: Asesoría Experta -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-red-400 flex items-center justify-center mb-4">
+          <MessageCircleWarning className="w-8 h-8 text-white" />
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Asesoría Experta</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Equipo especializado listo para ayudarte a elegir los mejores productos
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="text-center">
+      <a 
+        href="#contacto" 
+        class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+      >
+        Contáctanos Ahora
+      </a>
+    </div>
+  </div>
+</section>
