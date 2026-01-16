@@ -1,0 +1,289 @@
+---
+interface Testimonial {
+  text: string;
+  name: string;
+  type: string;
+  rating: number;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    text: "Desde que compro en La Feria del Aseo, mi casa siempre huele fresco y limpio. Los productos rinden mucho y los precios son muy justos.",
+    name: "Carolina Martinez",
+    type: "Hogar",
+    rating: 5,
+  },
+  {
+    text: "Llevamos más de un año comprándoles para nuestro restaurante. Siempre cumplen con las entregas y la calidad es constante.",
+    name: "José Ruiz",
+    type: "Restaurante",
+    rating: 5,
+  },
+  {
+    text: "Excelente variedad de productos para oficina. El equipo siempre nos asesora bien y nos ayuda a elegir lo que realmente necesitamos.",
+    name: "Andrea Lopéz",
+    type: "Oficina",
+    rating: 5,
+  },
+  {
+    text: "Probé varias distribuidoras antes, pero ninguna con esta relación calidad-precio. Además, la atención es muy cercana y profesional.",
+    name: "Miguel Páez",
+    type: "Negocio",
+    rating: 5,
+  },
+];
+
+const typeIcons: Record<string, string> = {
+  Hogar: "🏠",
+  Restaurante: "🍽️",
+  Oficina: "🏢",
+  Negocio: "💼",
+};
+---
+
+<section class="testimonials bg-gradient-to-br from-sky-50 via-white to-blue-50">
+  <div class="container">
+    <div class="header">
+      <span class="badge">Testimonios</span> <br>
+      <span class="title">Lo que dicen nuestros clientes</span>
+      <p>
+        La satisfacción de quienes confían en nosotros es nuestra mejor carta de
+        presentación.
+      </p>
+    </div>
+
+    <div class="grid">
+      {
+        testimonials.map((testimonial) => (
+          <article class="card">
+            <div class="stars">
+              {Array.from({ length: testimonial.rating }).map(() => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="star"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              ))}
+            </div>
+
+            <blockquote class="quote">
+              <svg
+                class="quote-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+              </svg>
+              <p>{testimonial.text}</p>
+            </blockquote>
+
+            <div class="author">
+              <div class="avatar">
+                <span>{typeIcons[testimonial.type] || "👤"}</span>
+              </div>
+              <div class="info">
+                <span class="name">{testimonial.name}</span>
+                <span class="type">{testimonial.type}</span>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="cta">
+      <p>
+        ¿Quieres ser parte de nuestros clientes satisfechos?
+        <a href="#contacto">Contáctanos</a> y descubre por qué somos tu mejor opción
+        en productos de limpieza.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 5rem 1rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .title{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #3a79ed;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #e8f2ff;
+    color: #3a5bed;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+
+  .header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .header p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow:
+      0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
+    border: 1px solid #f3f4f6;
+    transition: all 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+  }
+
+  .stars {
+    display: flex;
+    gap: 0.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .star {
+    width: 1.125rem;
+    height: 1.125rem;
+    color: #fbbf24;
+  }
+
+  .quote {
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+
+  .quote-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #d5e4ff;
+    margin-bottom: 0.5rem;
+  }
+
+  .quote p {
+    font-size: 0.9375rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f3f4f6;
+  }
+
+  .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #e8f2ff, #d5dfff);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .type {
+    font-size: 0.75rem;
+    color: #3a79ed;
+  }
+
+  .cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #d5dbff;
+  }
+
+  .cta p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .cta a {
+    color: #3a6aed;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .cta a:hover {
+    color: #2860d9;
+    text-decoration: underline;
+  }
+</style>
