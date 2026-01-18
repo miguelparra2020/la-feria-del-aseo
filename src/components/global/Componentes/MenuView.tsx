@@ -1,5 +1,5 @@
 import React from 'react'
-import {  ArrowBigDownDash } from 'lucide-react'
+import {  Download } from 'lucide-react'
 import { LinkWhasapp } from "@util/generalConfig";
 
 const MenuView = () => {
@@ -27,7 +27,7 @@ const MenuView = () => {
       <a href="/descargar" aria-label="Descargar información" className="inline-flex items-center justify-center w-12 h-12 
       font-medium bg-gray-600 rounded-full hover:bg-gray-700 group ring-4 focus:ring-4 ring-gray-200  focus:ring-gray-500
       focus:outline-none transition-all duration-300 shadow-lg hover:shadow-xl">
-        <ArrowBigDownDash className="w-6 h-6 text-white" />
+        <Download className="w-6 h-6 text-white" />
       </a>
       </div>
       

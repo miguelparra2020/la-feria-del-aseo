@@ -1,6 +1,7 @@
 ---
-import MiguelPaezImg from '@img/logoCompany.jpg'
-import ComercyoLogo from '@img/logoCompany.jpg'
+import MiguelPaezImg from '@img/FotoPerfilMiguelPaez.png'
+import ComercyoLogo from '@img/logoComercyo.png'
+import LaFeriaDelAseoLogo from '@img/logoCompany.jpg'
 
 const currentYear = new Date().getFullYear()
 ---
@@ -13,7 +14,7 @@ const currentYear = new Date().getFullYear()
         <!-- Comercyo branding -->
         <div class="flex items-center gap-3">
             <img
-                src={ComercyoLogo}
+                src={LaFeriaDelAseoLogo}
                 alt="Comercyo - Plataforma digital"
                 class="h-8 w-auto"
             />
@@ -27,14 +28,17 @@ const currentYear = new Date().getFullYear()
         class="flex flex-wrap justify-center gap-4 md:gap-6 text-sm text-gray-600"
         aria-label="Footer navigation"
       >
-        <a href="/serviciosagendamiento" class="hover:text-gray-900 transition">
+        <a href="https://api.whatsapp.com/send?phone=573133487191&text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"  class="hover:text-gray-900 transition">
           Servicios
         </a>
-        <a href="/fotos" class="hover:text-gray-900 transition">
+        <a href="https://api.whatsapp.com/send?phone=573133487191&text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="hover:text-gray-900 transition">
           Productos
         </a>
-        <a href="/ubicacion" class="hover:text-gray-900 transition">
+        <a href="https://api.whatsapp.com/send?phone=573133487191&text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="hover:text-gray-900 transition">
           Publicaciones
+        </a>
+        <a href="https://maps.app.goo.gl/JA6spG7AndLcZGYe7" target="_blank" class="hover:text-gray-900 transition">
+          Ubicación
         </a>
       </nav>
     </div>
@@ -54,14 +58,14 @@ const currentYear = new Date().getFullYear()
     <span>By</span>
 
     <img
-      src={MiguelPaezImg}
+      src={ComercyoLogo}
       alt="Miguel Páez - Desarrollador de software"
       class="w-8 h-8 rounded-full object-cover border"
     />
 
-    <span class="font-medium">
+    <a href="https://comercyo.com/" target="_blank"><span class="font-medium">
       comercyo.com
-    </span>
+    </span></a>
   </div>
 </div>
 
@@ -74,9 +78,11 @@ const currentYear = new Date().getFullYear()
             alt="Miguel Páez - Desarrollador de software"
             class="w-8 h-8 rounded-full object-cover border"
           />
+          <a href="https://miguelpaez.vercel.app/" target="_blank">
           <span>
             Miguel Páez — Desarrollador de software
           </span>
+          </a>
         </div>
       </div>
 
