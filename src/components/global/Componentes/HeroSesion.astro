@@ -1,5 +1,6 @@
 ---
 import HeroImg from "@img/hero.jpg"
+import PortadaImg from "@img/portada.jpg"
 ---
 <div class="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
       <!-- Decorative background elements -->
@@ -11,12 +12,20 @@ import HeroImg from "@img/hero.jpg"
 
       <!-- Hero Section -->
       <div class="relative">
-        <div class="container mx-auto px-4 py-16 lg:py-24">
+        <div class="container mx-auto px-4 py-8 sm:py-12 lg:py-24">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Mobile Cover Image -->
+              <div class="lg:hidden ">
+                <img 
+                  src={PortadaImg} 
+                  alt="Portada de la empresa" 
+                  class="w-full h-48 object-cover rounded-lg shadow-lg"
+                />
+              </div>
             <!-- Left Column - Content -->
-            <div class="space-y-8 text-center lg:text-left">
+            <div class=" text-center lg:text-left">
               <!-- Logo -->
-              <div class="inline-flex items-center justify-center lg:justify-start space-x-3 mb-4">
+              <div class="hidden lg:inline-flex items-center justify-center lg:justify-start space-x-3 mb-4">
                 <div class="relative">
                   <svg class="w-16 h-16 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
@@ -43,7 +52,7 @@ import HeroImg from "@img/hero.jpg"
               </div>
 
               <!-- Description -->
-              <p class="text-lg text-slate-600 leading-relaxed max-w-2xl text-pretty">
+              <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl text-pretty">
                 Somos una empresa especializada en soluciones de limpieza para hogares, negocios y empresas. Encuentra
                 calidad, variedad y precios competitivos en todos nuestros productos. Queremos hacer tu vida más limpia,
                 práctica y segura.
@@ -66,6 +75,8 @@ import HeroImg from "@img/hero.jpg"
                   Ver productos
                 </a>
               </div>
+
+              
 
               <!-- Trust indicators -->
               <div class="flex flex-wrap gap-8 justify-center lg:justify-start pt-8 border-t border-red-200">

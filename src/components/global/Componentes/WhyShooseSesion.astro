@@ -1,5 +1,6 @@
 ---
 import { CircleDollarSign, PackageCheck, Car, MessageCircleWarning } from "lucide-react";
+import PortadaImg from "@img/portada.jpg"
 
 
 ---
@@ -15,6 +16,15 @@ import { CircleDollarSign, PackageCheck, Car, MessageCircleWarning } from "lucid
         Somos tu socio confiable en soluciones de limpieza profesional
       </p>
     </div>
+
+    <div class="hidden lg:block">
+                <img 
+                  src={PortadaImg} 
+                  alt="Portada de la empresa" 
+                  class="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <br>
 
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
